@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
+import { RiMenu4Line } from "react-icons/ri";
 
 export const Container = styled.div`
     height: 100px;
@@ -6,6 +8,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     background-color: #e9ecef;
+    position: fixed;
 `;
 
 export const Wrapper = styled.div`
@@ -14,6 +17,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({ margin: "10px 20px" })}
 `;
 
 export const Left = styled.div`
@@ -25,6 +29,7 @@ export const Logo = styled.h1`
     color: #006d77;
     cursor: pointer;
     text-transform: uppercase;
+    ${mobile({ fontSize: "20px" })}
 `;
 
 export const Right = styled.div`
@@ -45,4 +50,15 @@ export const Item = styled.a`
         background-color: #ffffff;
         color: #006d77;
     }
+
+    ${mobile({ display: "none" })}
+`;
+
+export const MenuBar = styled(RiMenu4Line)`
+    display: none;
+    ${mobile({
+        display: "block",
+        cursor: "pointer",
+        fontSize: "25px",
+    })}
 `;
