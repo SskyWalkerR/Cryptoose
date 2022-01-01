@@ -8,7 +8,6 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
     ${mobile({ height: "auto" })}
 `;
 

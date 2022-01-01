@@ -34,7 +34,7 @@ const News = () => {
         <Container>
             <Title>Crypto News</Title>
             <NewsCardSection>
-                {cryptoNews?.value?.map(news => {
+                {cryptoNews?.value.map(news => {
                     return (
                         <NewsCard>
                             <Top>

@@ -5,7 +5,6 @@ export const Container = styled.div`
     height: auto;
     min-height: calc(100vh - 100px);
     background-color: #e9ecef;
-    padding-top: 100px;
 `;
 
 export const Top = styled.div`

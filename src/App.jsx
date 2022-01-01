@@ -8,7 +8,6 @@ import News from "./pages/news/News";
 import Coin from "./pages/coin/Coin";
 import Dropdown from "./components/dropDown/DropDown";
 import Footer from "./components/footer/Footer";
-// import About from "./pages/about/About";
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +26,10 @@ function App() {
                     <Route path="news" element={<News />} />
                     <Route path="coins/:id" element={<Coin />} />
                 </Routes>
-                <Footer />
+                {/* <Footer /> */}
             </BrowserRouter>
         </div>
     );
 }
 
 export default App;
-
-// <Route path="about" element={<About />} />
