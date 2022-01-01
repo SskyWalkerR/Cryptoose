@@ -19,13 +19,13 @@ import millify from "millify";
 const Coin = () => {
     const location = useLocation();
     const { id } = location.state;
+    console.log(id);
     const { data, isFetching, isError } = useGetCoinQuery(id);
     const coin = data?.data?.coin;
+    console.log(data);
 
     if (isFetching) return "Loading...";
-
     if (!coin) return "Something Went Wrong..";
-
     if (isError) return "Error..";
 
     return (
@@ -64,7 +64,7 @@ const Coin = () => {
                         <Value color={coin.color}> {coin.numberOfMarkets}</Value>
                     </Item>
                     <Item>
-                        <Key color={coin.color}>Web</Key>
+                        <Key color={coin.color}> Web </Key>
                         <Value color={coin.color} type="link">
                             <a
                                 style={{ textDecoration: "none", color: "inherit" }}

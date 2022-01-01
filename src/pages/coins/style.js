@@ -5,7 +5,6 @@ export const Container = styled.div`
     height: calc(100vh - 100);
     width: 100%;
     background-color: #e9ecef;
-    padding-top: 100px;
 `;
 
 export const Title = styled.h1`
@@ -25,6 +24,7 @@ export const Wrapper = styled.div`
 export const Card = styled.div`
     height: 200px;
     width: 300px;
+
     margin: 10px;
     cursor: pointer;
     background-color: #ffffff;
@@ -34,6 +34,7 @@ export const Card = styled.div`
     &:hover {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
+    ${mobile({ minWidth: "350px" })}
 `;
 
 export const Top = styled.div`

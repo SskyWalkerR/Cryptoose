@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Bottom, Card, Container, Title, Top, Wrapper, Rank, Icon, Item } from "./style";
 import { useGetCryptoCoinsQuery } from "../../services/cryptoApi";
 import millify from "millify";
