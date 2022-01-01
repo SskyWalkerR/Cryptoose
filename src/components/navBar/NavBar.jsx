@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Item, Logo, Right, Wrapper, Left } from "./style";
+import { Container, Item, Logo, Right, Wrapper, Left, MenuBar } from "./style";
 
-const SideBar = () => {
+const SideBar = ({ toggle }) => {
     return (
         <Container>
             <Wrapper>
@@ -13,6 +13,7 @@ const SideBar = () => {
                 </Left>
 
                 <Right>
+                    <MenuBar onClick={toggle} />
                     <Link to="/" style={{ textDecoration: "none" }}>
                         <Item>HOME</Item>
                     </Link>
@@ -22,9 +23,9 @@ const SideBar = () => {
                     <Link to="/news" style={{ textDecoration: "none" }}>
                         <Item>NEWS</Item>
                     </Link>
-                    <Link to="/about" style={{ textDecoration: "none" }}>
+                    {/* <Link to="/about" style={{ textDecoration: "none" }}>
                         <Item>ABOUT</Item>
-                    </Link>
+                    </Link> */}
                 </Right>
             </Wrapper>
         </Container>

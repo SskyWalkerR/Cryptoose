@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 export const Container = styled.div`
     height: calc(100vh - 100);
     width: 100%;
     background-color: #e9ecef;
+    padding-top: 100px;
 `;
 
 export const Title = styled.h1`
     margin-left: 60px;
+    ${mobile({ margin: 0, textAlign: "center", fontSize: "25px" })}
 `;
 
 export const Wrapper = styled.div`
@@ -16,6 +19,7 @@ export const Wrapper = styled.div`
     align-items: center;
     flex-wrap: wrap;
     margin-top: 40px;
+    ${mobile({ marginTop: "20px" })}
 `;
 
 export const Card = styled.div`

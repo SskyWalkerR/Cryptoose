@@ -12,8 +12,9 @@ import {
     Image,
     Bottom,
     Desc,
-    CreatedAt,
+    SourceButton,
 } from "./style";
+import { GrFormNextLink } from "react-icons/gr";
 
 const News = () => {
     const {
@@ -26,8 +27,8 @@ const News = () => {
     });
 
     if (isFetching) return "Loading...";
-    if (!cryptoNews) return "Something Went Wrong..";
     if (isError) return "Error..";
+    if (!cryptoNews) return "Something Went Wrong..";
 
     return (
         <Container>
@@ -49,6 +50,9 @@ const News = () => {
                             </Top>
                             <Bottom>
                                 <Desc>{news?.description}</Desc>
+                                <SourceButton href={news?.url}>
+                                    Source <GrFormNextLink />
+                                </SourceButton>
                             </Bottom>
                         </NewsCard>
                     );

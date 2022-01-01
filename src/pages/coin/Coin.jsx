@@ -64,7 +64,7 @@ const Coin = () => {
                         <Value color={coin.color}> {coin.numberOfMarkets}</Value>
                     </Item>
                     <Item>
-                        <Key color={coin.color}> Official Website -</Key>
+                        <Key color={coin.color}>Web</Key>
                         <Value color={coin.color} type="link">
                             <a
                                 style={{ textDecoration: "none", color: "inherit" }}
